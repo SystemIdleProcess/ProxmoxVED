@@ -28,7 +28,7 @@ function update_script() {
     msg_error "No ${APP} Installation Found!"
     exit
   fi
-  if check_for_gh_release "unifi-toolkit" "Crosstalk-Solutions/unifi-toolkit"; then
+  if check_for_gh_tag "unifi-toolkit" "Crosstalk-Solutions/unifi-toolkit"; then
     msg_info "Stopping Service"
     systemctl stop unifi-toolkit
     msg_ok "Stopped Service"
@@ -36,7 +36,7 @@ function update_script() {
     setup_python "3.12"
     cd /opt/unifi-toolkit
     source venv/bin/activate
-    fetch_and_deploy_gh_release "unifi-toolkit" "Crosstalk-Solutions/unifi-toolkit" "tarball"
+    fetch_and_deploy_gh_tag "unifi-toolkit" "Crosstalk-Solutions/unifi-toolkit"
     msg_info "Updating Unifi-Toolkit"
     pip install -r requirements.txt --upgrade
     alembic upgrade head

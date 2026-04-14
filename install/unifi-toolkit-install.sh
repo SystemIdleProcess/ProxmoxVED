@@ -25,7 +25,7 @@ if [[ ! "$CONFIRM" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 setup_python "3.12"
-fetch_and_deploy_gh_release "unifi-toolkit" "Crosstalk-Solutions/unifi-toolkit" "tarball"
+fetch_and_deploy_gh_tag "unifi-toolkit" "Crosstalk-Solutions/unifi-toolkit"
 
 msg_info "Setup Unifi-Toolkit"
 cd /opt/unifi-toolkit
