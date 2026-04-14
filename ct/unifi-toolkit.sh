@@ -5,8 +5,8 @@ source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxV
 # License: MIT | https://github.com/community-scripts/ProxmoxVED/raw/main/LICENSE
 # Source: https://github.com/Crosstalk-Solutions/unifi-toolkit
 
-APP="UI Toolkit"
-var_tags="${var_tags:-notification}"
+APP="Unifi Toolkit"
+var_tags="${var_tags:-network}"
 var_cpu="${var_cpu:-2}"
 var_ram="${var_ram:-2048}"
 var_disk="${var_disk:-2}"
