@@ -33,7 +33,7 @@ function update_script() {
     systemctl stop unifi-toolkit
     msg_ok "Stopped Service"
 
-    setup_python "3.12"
+    PYTHON_VERSION="312" setup_uv
     cd /opt/unifi-toolkit
     source venv/bin/activate
     fetch_and_deploy_gh_tag "unifi-toolkit" "Crosstalk-Solutions/unifi-toolkit"

@@ -24,7 +24,7 @@ if [[ ! "$CONFIRM" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   exit 10
 fi
 
-setup_python "3.12"
+PYTHON_VERSION="312" setup_uv
 fetch_and_deploy_gh_tag "unifi-toolkit" "Crosstalk-Solutions/unifi-toolkit"
 
 msg_info "Setup Unifi-Toolkit"
