@@ -38,7 +38,7 @@ function update_script() {
     source venv/bin/activate
     fetch_and_deploy_gh_tag "unifi-toolkit" "Crosstalk-Solutions/unifi-toolkit"
     msg_info "Updating Unifi-Toolkit"
-    pip install -r requirements.txt --upgrade
+    $STD uv pip install -r requirements.txt --python /opt/unifi-toolkit/venv/bin/python3
     alembic upgrade head
     msg_ok "Updated Unifi-Toolkit"
 

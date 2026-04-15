@@ -32,7 +32,7 @@ cd /opt/unifi-toolkit
 $STD bash setup.sh
 python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
+$STD uv pip install -r requirements.txt --python /opt/unifi-toolkit/venv/bin/python3
 msg_ok "Setup Unifi-Toolkit"
 
 msg_info "Creating Service"
